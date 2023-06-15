@@ -11,14 +11,14 @@ public class LoginClass {
     String password;
     String fname, lname;
     Scanner UN = new Scanner(System.in);
-
+//Login details feature
     public void registeruser() {
         System.out.println("Enter your first name");
         fname = UN.nextLine();
         System.out.println("Enter your last name");
         lname = UN.nextLine();
     }
-
+//Login details
     public void checkusername() {
         System.out.println("Please enter your username");
         username = UN.nextLine();
@@ -32,20 +32,21 @@ public class LoginClass {
         }
 
     }
-
+//Username verification and conditions
     public static boolean usernameverification(String UName) {
         return UName.length() <= 5 && UName.contains("_");
     }
 
     public static void Application(String[] args) {
-
+//Welcome message for application
         JOptionPane.showMessageDialog(null, "Welcome to EasyKanban");
     }
-
+//Password feature
     public void passwordverification() {
         System.out.println("Please enter a password");
         password = UN.nextLine();
-
+//Boolean to check wether or not the password meets the correct complexity 
+//requirements using CLI
         if (checkpasswordcomplexity(password)) {
             System.out.println("Password successfully entered!");
         } else {
@@ -54,13 +55,13 @@ public class LoginClass {
                     + "letter, a number and a special character.");
         }
     }
-
+//Password complexity requirements
     public static boolean checkpasswordcomplexity(String PWord) {
         Pattern sp = Pattern.compile("[a-zA-Z0-9]*");
         Matcher pm = sp.matcher(PWord);
         return PWord.length() >= 8 && !pm.matches();
     }
-
+//Login user again using the password and the username
     public boolean loginuser() {
         String userN, passW;
         System.out.println("Please re-enter username,for security "
@@ -70,7 +71,7 @@ public class LoginClass {
         System.out.println("Please re-enter password, for security "
                 + "purposes");
         passW = UN.nextLine();
-
+//Boolean to welcome the user using CLI feature
         if (userN.equals(username) && passW.equals(password)) {
             System.out.println("Welcome, it is great to see you again. "
                     + "Your login was successful.");

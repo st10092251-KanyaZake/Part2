@@ -18,7 +18,7 @@ public class TaskClass {
     public static int TaskDuration;
     public static int TotalDuration;
     public static int DeveloperDetails;
-    //First and last name of develope
+    //First and last name of developer
     public static double TaskStatus;
     public static int option;
 
