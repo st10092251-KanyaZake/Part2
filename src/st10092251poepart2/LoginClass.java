@@ -61,13 +61,13 @@ public class LoginClass {
         Matcher pm = sp.matcher(PWord);
         return PWord.length() >= 8 && !pm.matches();
     }
-//Login user again using the password and the username
+//Login user again using the username
     public boolean loginuser() {
         String userN, passW;
         System.out.println("Please re-enter username,for security "
                 + "purposes");
         userN = UN.nextLine();
-
+//Login the use using the password
         System.out.println("Please re-enter password, for security "
                 + "purposes");
         passW = UN.nextLine();
