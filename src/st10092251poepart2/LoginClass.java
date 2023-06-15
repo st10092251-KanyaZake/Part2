@@ -76,7 +76,7 @@ public class LoginClass {
             System.out.println("Welcome, it is great to see you again. "
                     + "Your login was successful.");
             return true;
-
+//Boolean to show the incorrect login feature usage
         } else {
             System.out.println("Your login failed due to an incorrect password "
                     + "or username, please try again.");
