@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 public class TaskClass {
 
     // declare variables 
+    //Part 3: Create array by removing variables
     public static String TaskName;
     public static int TaskNumber;
     public static int TaskDescription;

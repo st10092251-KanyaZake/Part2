@@ -13,6 +13,26 @@ public class LoginClass {
     Scanner UN = new Scanner(System.in);
 //Login details feature
     public void registeruser() {
+        //The register feature will be found here
+        //RegisterUser obj = new RegisterUser();
+        
+        int arraySize = Integer.parseInt(JOptionPane.showInputDialog
+        ("What is the size of your array"));
+        
+        int[] myValues = new int[arraySize];
+        
+        for (int i = 0; i < 10; i++)
+        {
+            myValues[i] = Integer.parseInt(JOptionPane.showInputDialog
+        ("Enter an Integer"));
+        }
+        
+        //JOptionPane.showMessageDialog(null,"The maximum number is " 
+             //   + obj.max(myValues));
+        
+        //JOptionPane.showMessageDialog(null,"The minimum number is " 
+          //      + obj.min(myValues));
+        
         System.out.println("Enter your first name");
         fname = UN.nextLine();
         System.out.println("Enter your last name");
@@ -67,7 +87,7 @@ public class LoginClass {
         System.out.println("Please re-enter username,for security "
                 + "purposes");
         userN = UN.nextLine();
-//Login the use using the password
+//Login the user again using CLI
         System.out.println("Please re-enter password, for security "
                 + "purposes");
         passW = UN.nextLine();
