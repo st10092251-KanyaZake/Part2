@@ -18,16 +18,16 @@ public class LoginClass {
         //The register feature will be found here
         //RegisterUser obj = new RegisterUser();
         
-        int arraySize = Integer.parseInt(JOptionPane.showInputDialog
-        ("What is the size of your array"));
-        
-        int[] myValues = new int[arraySize];
-        
-        for (int i = 0; i < 10; i++)
-        {
-            myValues[i] = Integer.parseInt(JOptionPane.showInputDialog
-        ("Enter an Integer"));
-        }
+//        int arraySize = Integer.parseInt(JOptionPane.showInputDialog
+//        ("What is the size of your array"));
+//        
+//        int[] myValues = new int[arraySize];
+//        
+//        for (int i = 0; i < arraySize; i++)
+//        {
+//            myValues[i] = Integer.parseInt(JOptionPane.showInputDialog
+//        ("Enter an Integer"));
+//        }
         
         //JOptionPane.showMessageDialog(null,"The maximum number is " 
              //   + obj.max(myValues));

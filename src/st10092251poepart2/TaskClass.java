@@ -2,19 +2,16 @@ package st10092251poepart2;
 
 import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
-import java.util.Arrays;
-import java.util.Scanner;
 //import static st10092251poepart2.St10092251POEPart2.TaskDescription;
 //import static st10092251poepart2.St10092251POEPart2.menu;
 //import static st10092251poepart2.St10092251POEPart2.task_num;
 
 public class TaskClass {
 
-    //declare variables    
+    // declare variables 
     public static String TaskName;
     public static int TaskNumber;
     public static int TaskDescription;
-    //Condition: Should not exceed 50 characters in length.
     public static String TaskID;
     public static String TaskDeveloper;
     public static int TaskDuration;
@@ -23,16 +20,14 @@ public class TaskClass {
     //First and last name of developer
     public static double TaskStatus;
     public static int option;
-    public static int NumOfTasks;
-    //  STEP 1 Declare arrays:
-    // developer
-    public static String[] dev;
-    // task name
-    // task ID
-    // task duration 
-    // task status
+    public static int totalTasks;
+    // Declaring arrays
+    public static String dev[];
+    public static String ID[];
+    public static String name[];
+    public static int duration[];
+    public static double status[];
 
-//getter and setter
     public static String getTaskName() {
         return TaskName;
     }
@@ -130,7 +125,8 @@ public class TaskClass {
     }
 
     public static String menu() {
-        //Make application perform the following functions, for each task performed:
+        //Make application perform the following functions, for each task 
+        //performed:
         return JOptionPane.showInputDialog(null, "Welcome to EasyKanban "
                 + "\n Please "
                 + "choose one of the following: \n Option 1) Add tasks \n"
@@ -139,9 +135,10 @@ public class TaskClass {
     }
 
     public static void user() {
-// ************
+
         //Option 1:
-        TaskNumber = parseInt(JOptionPane.showInputDialog(null, "How many tasks "
+        TaskNumber = parseInt(JOptionPane.showInputDialog(null, "How many "
+                + "tasks "
                 + "would you like to add?"));
         //int task_num= Keyboard.hashCode();
         for (int i = 0; i < TaskNumber; i++) {
@@ -166,10 +163,6 @@ public class TaskClass {
     public static void Quit() {
         //Option 3:
         JOptionPane.showMessageDialog(null, "Quit");
-    }
-
-    private static void displayAddress() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public boolean checkTaskDescription(String description) {
@@ -200,35 +193,35 @@ public class TaskClass {
     public static void display() {
 
         for (int i = 0; i < TaskNumber; i++) {
-            JOptionPane.showMessageDialog(null, "Task name" + TaskName);
-            JOptionPane.showMessageDialog(null, "Task number" + TaskNumber);
-            JOptionPane.showMessageDialog(null, "Task description" + TaskDescription);
+            // STEP 3 displaying the array
+            JOptionPane.showMessageDialog(null, "Task Developer" + dev[i]);
+            JOptionPane.showMessageDialog(null, "Task name" + name[i]);
+
+            JOptionPane.showMessageDialog(null, "Task ID" + ID[i]);
+
+            JOptionPane.showMessageDialog(null, "Task Duration" + duration[i]);
+
+            JOptionPane.showMessageDialog(null, "Task Status" + status[i]);
+
         }
     }
 
-    public static void developernames() {
-        displayAddress();
-        // STEP 2 Add data to the array
-        for (int i = 0; i < NumOfTasks; i++) {
-        JOptionPane.showInputDialog(null, "Please enter the developer's names"
-                + TaskDeveloper);
-           TaskDeveloper = dev[i];
-        JOptionPane.showInputDialog(null, "Please enter the task names"
-                + TaskName);
-        JOptionPane.showInputDialog(null, "Please enter the task ID" + TaskID);
-        JOptionPane.showInputDialog(null, "Please enter the task duration"
-                + TaskDuration);
-        JOptionPane.showInputDialog(null, "Please enter the task status"
-                + TaskStatus);
-            
-        }
+    public static void Array() {
+       totalTasks = Integer.parseInt(JOptionPane.showInputDialog(null,"What is the size ofyour array"));
 
-    }
-
-    public static void Arrays() {
-        for (int i = 0; i < NumOfTasks; i++) {
-            JOptionPane.showMessageDialog(null, "Name>> " + dev[i]);
+        for (int i = 0; i < totalTasks; i++) {
+            // STEP 2 Adding elements to the array
+            TaskDeveloper = JOptionPane.showInputDialog(null, "Dev name");
+            TaskDeveloper = dev[i];
             
+            TaskName = JOptionPane.showInputDialog(null, "Task Name");
+            TaskName = name[i];
+            TaskID = JOptionPane.showInputDialog(null, "Task ID" );
+            TaskID = ID[i];
+            TaskDuration = Integer.parseInt(JOptionPane.showInputDialog(null, "Task Duration" ));
+            TaskDuration = duration[i];
+            TaskStatus = Double.parseDouble(JOptionPane.showInputDialog(null, "Task Status" ));
+            TaskStatus = status[i];
         }
     }
 }

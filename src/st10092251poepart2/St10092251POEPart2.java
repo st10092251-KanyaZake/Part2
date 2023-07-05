@@ -9,11 +9,11 @@ public class St10092251POEPart2 {
     public static int option;
 
     public static void main(String[] args) {
-        LoginClass ln = new LoginClass();
-        ln.registeruser();
-        ln.checkusername();
-        ln.passwordverification();
-        ln.loginuser();
+        //LoginClass ln = new LoginClass();
+        //ln.registeruser();
+        //ln.checkusername();
+        //ln.passwordverification();
+        //ln.loginuser();
 
         TaskClass tc = new TaskClass();
         JOptionPane.showInputDialog(null, "Welcome to EasyKanban "

@@ -7,20 +7,15 @@
  *
  * @author lab_services_student
  */
-public class st10092251POEPart2Test {
+public class ST10092251POEPart3Test {
 
-    private static void main(String[] args) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-        public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        st10092251POEPart2Test.main(args);
+          public void testTask1() {
+        System.out.println("Task 1");
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+   //     fail("The test case is a prototype.");
     }
-
-    private void fail(String the_test_case_is_a_prototype) {
+          public void testTask2() {
+   // private void fail(String the_test_case_is_a_prototype) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
