@@ -2,14 +2,15 @@ package st10092251poepart2;
 
 import static java.lang.Integer.parseInt;
 import javax.swing.JOptionPane;
+import java.util.Arrays;
+import java.util.Scanner;
 //import static st10092251poepart2.St10092251POEPart2.TaskDescription;
 //import static st10092251poepart2.St10092251POEPart2.menu;
 //import static st10092251poepart2.St10092251POEPart2.task_num;
 
 public class TaskClass {
 
-    // declare variables 
-    //Part 3: Create array by removing variables
+    //declare variables    
     public static String TaskName;
     public static int TaskNumber;
     public static int TaskDescription;
@@ -22,6 +23,95 @@ public class TaskClass {
     //First and last name of developer
     public static double TaskStatus;
     public static int option;
+    public static int NumOfTasks;
+    //  STEP 1 Declare arrays:
+    // developer
+    public static String[] dev;
+    // task name
+    // task ID
+    // task duration 
+    // task status
+
+//getter and setter
+    public static String getTaskName() {
+        return TaskName;
+    }
+
+    public static void setTaskName(String TaskName) {
+        TaskClass.TaskName = TaskName;
+    }
+
+    public static int getTaskNumber() {
+        return TaskNumber;
+    }
+
+    public static void setTaskNumber(int TaskNumber) {
+        TaskClass.TaskNumber = TaskNumber;
+    }
+
+    public static int getTaskDescription() {
+        return TaskDescription;
+    }
+
+    public static void setTaskDescription(int TaskDescription) {
+        TaskClass.TaskDescription = TaskDescription;
+    }
+
+    public static String getTaskID() {
+        return TaskID;
+    }
+
+    public static void setTaskID(String TaskID) {
+        TaskClass.TaskID = TaskID;
+    }
+
+    public static String getTaskDeveloper() {
+        return TaskDeveloper;
+    }
+
+    public static void setTaskDeveloper(String TaskDeveloper) {
+        TaskClass.TaskDeveloper = TaskDeveloper;
+    }
+
+    public static int getTaskDuration() {
+        return TaskDuration;
+    }
+
+    public static void setTaskDuration(int TaskDuration) {
+        TaskClass.TaskDuration = TaskDuration;
+    }
+
+    public static int getTotalDuration() {
+        return TotalDuration;
+    }
+
+    public static void setTotalDuration(int TotalDuration) {
+        TaskClass.TotalDuration = TotalDuration;
+    }
+
+    public static int getDeveloperDetails() {
+        return DeveloperDetails;
+    }
+
+    public static void setDeveloperDetails(int DeveloperDetails) {
+        TaskClass.DeveloperDetails = DeveloperDetails;
+    }
+
+    public static double getTaskStatus() {
+        return TaskStatus;
+    }
+
+    public static void setTaskStatus(double TaskStatus) {
+        TaskClass.TaskStatus = TaskStatus;
+    }
+
+    public static int getOption() {
+        return option;
+    }
+
+    public static void setOption(int option) {
+        TaskClass.option = option;
+    }
 
     // methods
     public static boolean taskdescription() {
@@ -49,7 +139,7 @@ public class TaskClass {
     }
 
     public static void user() {
-
+// ************
         //Option 1:
         TaskNumber = parseInt(JOptionPane.showInputDialog(null, "How many tasks "
                 + "would you like to add?"));
@@ -76,6 +166,10 @@ public class TaskClass {
     public static void Quit() {
         //Option 3:
         JOptionPane.showMessageDialog(null, "Quit");
+    }
+
+    private static void displayAddress() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public boolean checkTaskDescription(String description) {
@@ -111,5 +205,30 @@ public class TaskClass {
             JOptionPane.showMessageDialog(null, "Task description" + TaskDescription);
         }
     }
-//    public boolean checktaskDesc
+
+    public static void developernames() {
+        displayAddress();
+        // STEP 2 Add data to the array
+        for (int i = 0; i < NumOfTasks; i++) {
+        JOptionPane.showInputDialog(null, "Please enter the developer's names"
+                + TaskDeveloper);
+           TaskDeveloper = dev[i];
+        JOptionPane.showInputDialog(null, "Please enter the task names"
+                + TaskName);
+        JOptionPane.showInputDialog(null, "Please enter the task ID" + TaskID);
+        JOptionPane.showInputDialog(null, "Please enter the task duration"
+                + TaskDuration);
+        JOptionPane.showInputDialog(null, "Please enter the task status"
+                + TaskStatus);
+            
+        }
+
+    }
+
+    public static void Arrays() {
+        for (int i = 0; i < NumOfTasks; i++) {
+            JOptionPane.showMessageDialog(null, "Name>> " + dev[i]);
+            
+        }
+    }
 }

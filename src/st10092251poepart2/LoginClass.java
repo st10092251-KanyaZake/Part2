@@ -11,7 +11,9 @@ public class LoginClass {
     String password;
     String fname, lname;
     Scanner UN = new Scanner(System.in);
+    
 //Login details feature
+    
     public void registeruser() {
         //The register feature will be found here
         //RegisterUser obj = new RegisterUser();
